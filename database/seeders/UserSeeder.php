@@ -10,13 +10,7 @@ class UserSeeder extends Seeder
 {
     public function run(): void
     {
-        User::create([
-            'name' => 'Admin User',
-            'email' => 'admin@example.com',
-            'password' => Hash::make('password'),
-            'role' => 'admin',
-        ]);
-
+        // Manager
         User::create([
             'name' => 'Manager User',
             'email' => 'manager@example.com',
@@ -24,11 +18,13 @@ class UserSeeder extends Seeder
             'role' => 'manager',
         ]);
 
+        // Anggota 1
         User::create([
-            'name' => 'Staff User',
-            'email' => 'staff@example.com',
+            'name' => 'Anggota 1',
+            'email' => 'anggota1@example.com',
             'password' => Hash::make('password'),
-            'role' => 'staff',
+            'role' => 'anggota',
         ]);
+
     }
 }
