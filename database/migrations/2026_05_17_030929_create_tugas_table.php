@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('judul');
             $table->text('deskripsi')->nullable();
             $table->enum('prioritas', ['rendah', 'sedang', 'tinggi'])->default('sedang');
-            $table->enum('status', ['todo', 'proses', 'review', 'done'])->default('todo');
+            $table->enum('status', ['belum_mulai', 'sedang_berjalan', 'selesai'])->default('belum_mulai');
             $table->date('deadline');
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
             $table->timestamp('created_at')->useCurrent();

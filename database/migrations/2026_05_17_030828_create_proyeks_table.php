@@ -14,7 +14,7 @@ return new class extends Migration
             $table->string('nama_proyek');
             $table->text('deskripsi')->nullable();
             $table->date('deadline');
-            $table->enum('status', ['pending', 'proses', 'selesai'])->default('pending');
+            $table->enum('status', ['aktif', 'selesai', 'ditangguhkan'])->default('aktif');
             $table->timestamps();
         });
     }
